@@ -16,14 +16,16 @@ function M.calculate()
   local end_pos = vim.fn.getpos("'>")
   local input = vim.api.nvim_buf_get_lines(0,start_pos[2]-1,end_pos[2],false)
   local input_str = table.concat(input)
+  local i = 1
   for number in string.gmatch(input_str, "%d+%.?%d*") do
-    table.insert(numbers,tonumber(number))
+    numbers[i] = tonumber(number)
+    i = i + 1
     -- print(number)
   end
   local sum = 0
   local count = 0
   table.sort(numbers, bigger)
-  for index,number in pairs(numbers) do
+  for index,number in ipairs(numbers) do
     sum = sum + number
     count = count + 1
   end
