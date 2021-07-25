@@ -62,4 +62,4 @@ Examples
 
 Extract out of list with text and $-signs
 
-[](resources/month_list.png)
+[](https://github.com/max397574/Vmath.nvim/blob/master/resources/month_list.png)
