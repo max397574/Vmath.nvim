@@ -18,6 +18,7 @@ function M.calculate()
   local input_str = table.concat(input)
   for number in string.gmatch(input_str, "%d+%.?%d*") do
     table.insert(numbers,tonumber(number))
+    -- print(number)
   end
   local sum = 0
   local count = 0
