@@ -47,3 +47,4 @@ Future Plans/Ideas
 ------------------
 * Ignore dates
 * More mathematical figures
+* Save numbers in registers
