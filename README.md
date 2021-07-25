@@ -6,6 +6,12 @@ Features
 --------
 
 * Calculate mathematical figures of visual selection
+    * Amount of numbers
+    * Sum
+    * Average
+    * Highest
+    * Lowest
+    * Range
 * Automatic recognition of numbers
 * Fast
 <details>
@@ -32,3 +38,12 @@ Features
     takes 0.000806s to calculate
 
 </details>
+
+Limitations
+-----------
+* Currently can't ignore dates
+
+Future Plans/Ideas
+------------------
+* Ignore dates
+* More mathematical figures
