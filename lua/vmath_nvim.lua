@@ -10,6 +10,7 @@ local function bigger(a,b)
 end
 
 function M.calculate()
+  -- local start = vim.fn['reltime']()
   local numbers = {}
   local start_pos = vim.fn.getpos("'<")
   local end_pos = vim.fn.getpos("'>")
@@ -32,7 +33,8 @@ function M.calculate()
   print("Smallest: " .. numbers[1])
   print("Biggest: " .. numbers[#numbers])
   print("Range: " .. (numbers[#numbers]-numbers[1]))
-
+  -- print("used time")
+  -- vim.cmd(string.format([[%s %s]], 'echo', vim.fn['reltimestr'](vim.fn['reltime'](start))))
 end
 
 function M.init()
