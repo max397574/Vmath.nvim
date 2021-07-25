@@ -39,6 +39,13 @@ Features
 
 </details>
 
+Usage
+-----
+`vnoremap <your mapping> <ESC>:Vmath<CR>`
+
+Example:
+`vnoremap <leader>vm <ESC>:Vmath<CR>`
+
 Limitations
 -----------
 * Currently can't ignore dates
