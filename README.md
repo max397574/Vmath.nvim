@@ -1,8 +1,8 @@
-# Vmath.nvim
+# 🧮Vmath.nvim
 
 A lua version of Damian Conway's [vmath](https://www.youtube.com/watch?v=aHm36-na4-4&t=1740s).
 
-Features
+✨Features
 --------
 
 * Calculate mathematical figures of visual selection
@@ -40,26 +40,26 @@ Features
 
 </details>
 
-Usage
+✅Usage
 -----
 `vnoremap <your mapping> <ESC>:Vmath<CR>`
 
 Example:
 `vnoremap <leader>vm <ESC>:Vmath<CR>`
 
-Limitations
+🚫Limitations
 -----------
 * Currently can't ignore dates
 * Only works with full lines (visual-line mode)
 
-Future Plans/Ideas
+💡Future Plans/Ideas
 ------------------
 * Ignore dates
 * More mathematical figures
 * Save numbers in registers
 * Add settings
 
-Examples
+👀Examples
 --------
 
 Extract out of list with text and $-signs
