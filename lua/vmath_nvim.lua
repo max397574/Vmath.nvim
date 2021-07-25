@@ -28,12 +28,19 @@ function M.calculate()
     count = count + 1
   end
   local average = sum/count
+  local median = 0
+  if (count%2==1) then
+    median = numbers[(count-1)/2+1]
+  else
+    median = (numbers[count/2]+numbers[count/2+1])/2
+  end
   print("Sum: " .. sum)
   print("Count: " .. count)
   print("Average: " .. average)
   print("Lowest: " .. numbers[1])
   print("Highest: " .. numbers[#numbers])
   print("Range: " .. (numbers[#numbers]-numbers[1]))
+  print("Median: " .. median)
   -- print("used time")
   -- vim.cmd(string.format([[%s %s]], 'echo', vim.fn['reltimestr'](vim.fn['reltime'](start))))
 end

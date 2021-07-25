@@ -12,6 +12,7 @@ Features
     * Highest
     * Lowest
     * Range
+    * Median
 * Automatic recognition of numbers
 * Fast
 <details>
