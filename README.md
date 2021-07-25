@@ -49,6 +49,7 @@ Example:
 Limitations
 -----------
 * Currently can't ignore dates
+* Only works with full lines (visual-line mode)
 
 Future Plans/Ideas
 ------------------
