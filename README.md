@@ -56,3 +56,10 @@ Future Plans/Ideas
 * More mathematical figures
 * Save numbers in registers
 * Add settings
+
+Examples
+--------
+
+Extract out of list with text and $-signs
+
+[](resources/month_list.png)
