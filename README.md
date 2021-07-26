@@ -40,8 +40,16 @@ A lua version of Damian Conway's [vmath](https://www.youtube.com/watch?v=aHm36-n
 
 </details>
 
+📦Installation
+------------
+Use your favourite package manager. Example with [vim-plug](https://github.com/junegunn/vim-plug).
+```
+Plug 'max397574/vmath.nvim'
+```
+
 ✅Usage
 -----
+Remap the command in visual mode.
 `vnoremap <your mapping> <ESC>:Vmath<CR>`
 
 Example:
