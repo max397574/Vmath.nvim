@@ -9,14 +9,14 @@ local function bigger(a,b)
   return a < b
 end
 
-show_sum = true
-show_average = true
-show_count = true
-show_lowest = true
-show_highest = true
-show_range = true
-show_median = true
-debug = false
+Show_sum = true
+Show_average = true
+Show_count = true
+Show_lowest = true
+Show_highest = true
+Show_range = true
+Show_median = true
+Debug = false
 
 function M.calculate()
   local start = vim.fn['reltime']()
@@ -34,7 +34,7 @@ function M.calculate()
   local sum = 0
   local count = 0
   table.sort(numbers, bigger)
-  for index,number in ipairs(numbers) do
+  for _,number in ipairs(numbers) do
     sum = sum + number
     count = count + 1
   end
@@ -45,28 +45,28 @@ function M.calculate()
   else
     median = (numbers[count/2]+numbers[count/2+1])/2
   end
-  if show_sum then
+  if Show_sum then
     print("Sum: " .. sum)
   end
-  if show_count then
+  if Show_count then
     print("Count: " .. count)
   end
-  if show_average then
+  if Show_average then
     print("Average: " .. average)
   end
-  if show_lowest then
+  if Show_lowest then
     print("Lowest: " .. numbers[1])
   end
-  if show_highest then
+  if Show_highest then
     print("Highest: " .. numbers[#numbers])
   end
-  if show_range then
+  if Show_range then
     print("Range: " .. (numbers[#numbers]-numbers[1]))
   end
-  if show_median then
+  if Show_median then
     print("Median: " .. median)
   end
-  if debug then
+  if Debug then
     print("used time")
     vim.cmd(string.format([[%s %s]], 'echo', vim.fn['reltimestr'](vim.fn['reltime'](start))))
   end
