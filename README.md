@@ -47,6 +47,41 @@ A lua version of Damian Conway's [vmath](https://www.youtube.com/watch?v=aHm36-n
 Example:
 `vnoremap <leader>vm <ESC>:Vmath<CR>`
 
+⚙️Customization
+-------------
+You can customize with the following lines in a vim configuration
+```lua
+lua << EOF
+require('vmath_nvim').setup{
+-- show these numbers
+show_sum = true,
+show_average = true,
+show_count = true,
+show_lowest = true,
+show_highest = true,
+show_range = true,
+show_median = true,
+-- show debug info (execution time)
+debug = true,
+}
+EOF
+```
+And this in a lua configuration:
+```lua
+require('vmath_nvim').setup{
+-- show these numbers
+show_sum = true,
+show_average = true,
+show_count = true,
+show_lowest = true,
+show_highest = true,
+show_range = true,
+show_median = true,
+-- show debug info (execution time)
+debug = true,
+}
+```
+
 🚫Limitations
 -----------
 * Currently can't ignore dates
