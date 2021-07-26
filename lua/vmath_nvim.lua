@@ -9,13 +9,14 @@ local function bigger(a,b)
   return a < b
 end
 
-local show_sum = true
-local show_average = true
-local show_lowest = true
-local show_highest = true
-local show_range = true
-local show_median = true
-local debug = false
+show_sum = true
+show_average = true
+show_count = true
+show_lowest = true
+show_highest = true
+show_range = true
+show_median = true
+debug = false
 
 function M.calculate()
   local start = vim.fn['reltime']()
@@ -65,7 +66,7 @@ function M.calculate()
   if show_median then
     print("Median: " .. median)
   end
-  if (debug) then
+  if debug then
     print("used time")
     vim.cmd(string.format([[%s %s]], 'echo', vim.fn['reltimestr'](vim.fn['reltime'](start))))
   end
