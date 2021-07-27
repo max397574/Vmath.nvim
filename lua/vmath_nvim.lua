@@ -19,6 +19,7 @@ settings.show_highest = true
 settings.show_range = true
 settings.show_median = true
 settings.debug = false
+settings.registers = true
 
 function M.setup(update)
   settings = setmetatable(update, { __index = settings })
@@ -52,29 +53,38 @@ function M.calculate()
     median = (numbers[count/2]+numbers[count/2+1])/2
   end
   if settings.show_sum then
-    print("Sum: " .. sum)
+    print("'S'um: " .. sum)
   end
   if settings.show_count then
-    print("Count: " .. count)
+    print("'C'ount: " .. count)
   end
   if settings.show_average then
-    print("Average: " .. average)
+    print("'A'verage: " .. average)
   end
   if settings.show_lowest then
-    print("Lowest: " .. numbers[1])
+    print("'L'owest: " .. numbers[1])
   end
   if settings.show_highest then
-    print("Highest: " .. numbers[#numbers])
+    print("'H'ighest: " .. numbers[#numbers])
   end
   if settings.show_range then
-    print("Range: " .. (numbers[#numbers]-numbers[1]))
+    print("'R'ange: " .. (numbers[#numbers]-numbers[1]))
   end
   if settings.show_median then
-    print("Median: " .. median)
+    print("'M'edian: " .. median)
   end
   if settings.debug then
     print("used time")
     vim.cmd(string.format([[%s %s]], 'echo', vim.fn['reltimestr'](vim.fn['reltime'](start))))
+  end
+  if settings.registers then
+    vim.fn.setreg("s",sum)
+    vim.fn.setreg("c",count)
+    vim.fn.setreg("a",average)
+    vim.fn.setreg("l",numbers[1])
+    vim.fn.setreg("h",numbers[#numbers])
+    vim.fn.setreg("r",numbers[#numbers]-numbers[1])
+    vim.fn.setreg("m",median)
   end
 end
 
