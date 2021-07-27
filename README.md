@@ -73,6 +73,7 @@ require('vmath_nvim').setup{
   -- show debug info (execution time)
   debug = false,
   -- save values in registers surrounded with ''
+  -- example: 'A'verage gets saved in register a
   registers = true,
 }
 EOF
@@ -91,6 +92,7 @@ require('vmath_nvim').setup{
   -- show debug info (execution time)
   debug = false,
   -- save values in registers surrounded with ''
+  -- example: 'A'verage gets saved in register a
   registers = true,
 }
 ```
