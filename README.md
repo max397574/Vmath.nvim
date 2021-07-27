@@ -14,6 +14,7 @@ A lua version of Damian Conway's [vmath](https://www.youtube.com/watch?v=aHm36-n
     * Range
     * Median
 * Automatic recognition of numbers
+* Option to set registers to number
 * Fast
 <details>
     <summary>Speed Reference</summary>
@@ -103,7 +104,6 @@ registers = true,
 ------------------
 * Ignore dates
 * More mathematical figures
-* Add settings
 
 👀Examples
 --------
