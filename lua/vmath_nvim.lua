@@ -78,13 +78,13 @@ function M.calculate()
     vim.cmd(string.format([[%s %s]], 'echo', vim.fn['reltimestr'](vim.fn['reltime'](start))))
   end
   if settings.registers then
-    vim.fn.setreg("s",sum)
-    vim.fn.setreg("c",count)
-    vim.fn.setreg("a",average)
-    vim.fn.setreg("l",numbers[1])
-    vim.fn.setreg("h",numbers[#numbers])
-    vim.fn.setreg("r",numbers[#numbers]-numbers[1])
-    vim.fn.setreg("m",median)
+    vim.fn.setreg("s",tostring(sum))
+    vim.fn.setreg("c",tostring(count))
+    vim.fn.setreg("a",tostring(average))
+    vim.fn.setreg("l",tostring(numbers[1]))
+    vim.fn.setreg("h",tostring(numbers[#numbers]))
+    vim.fn.setreg("r",tostring(numbers[#numbers]-numbers[1]))
+    vim.fn.setreg("m",tostring(median))
   end
 end
 
