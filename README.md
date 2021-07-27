@@ -57,7 +57,7 @@ Example:
 
 ⚙️Customization
 -------------
-You can customize with the following lines in a vim configuration
+You can customize with the following lines in a vim configuration. These are the default settings.
 ```lua
 lua << EOF
 require('vmath_nvim').setup{
@@ -70,7 +70,9 @@ show_highest = true,
 show_range = true,
 show_median = true,
 -- show debug info (execution time)
-debug = true,
+debug = false,
+-- save values in registers surrounded with ''
+registers = true,
 }
 EOF
 ```
@@ -86,7 +88,9 @@ show_highest = true,
 show_range = true,
 show_median = true,
 -- show debug info (execution time)
-debug = true,
+debug = false,
+-- save values in registers surrounded with ''
+registers = true,
 }
 ```
 
@@ -99,7 +103,6 @@ debug = true,
 ------------------
 * Ignore dates
 * More mathematical figures
-* Save numbers in registers
 * Add settings
 
 👀Examples
