@@ -62,36 +62,36 @@ You can customize with the following lines in a vim configuration. These are the
 ```lua
 lua << EOF
 require('vmath_nvim').setup{
--- show these numbers
-show_sum = true,
-show_average = true,
-show_count = true,
-show_lowest = true,
-show_highest = true,
-show_range = true,
-show_median = true,
--- show debug info (execution time)
-debug = false,
--- save values in registers surrounded with ''
-registers = true,
+  -- show these numbers
+  show_sum = true,
+  show_average = true,
+  show_count = true,
+  show_lowest = true,
+  show_highest = true,
+  show_range = true,
+  show_median = true,
+  -- show debug info (execution time)
+  debug = false,
+  -- save values in registers surrounded with ''
+  registers = true,
 }
 EOF
 ```
 And this in a lua configuration:
 ```lua
 require('vmath_nvim').setup{
--- show these numbers
-show_sum = true,
-show_average = true,
-show_count = true,
-show_lowest = true,
-show_highest = true,
-show_range = true,
-show_median = true,
--- show debug info (execution time)
-debug = false,
--- save values in registers surrounded with ''
-registers = true,
+  -- show these numbers
+  show_sum = true,
+  show_average = true,
+  show_count = true,
+  show_lowest = true,
+  show_highest = true,
+  show_range = true,
+  show_median = true,
+  -- show debug info (execution time)
+  debug = false,
+  -- save values in registers surrounded with ''
+  registers = true,
 }
 ```
 
