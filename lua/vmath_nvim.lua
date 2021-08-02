@@ -43,7 +43,7 @@ function M.calculate()
   for number in string.gmatch(input_str, "%d+%.?%d*") do
     numbers[i] = tonumber(number)
     i = i + 1
-    -- print(number)
+    print_condition(settings.debug,number)
   end
   local sum = 0
   local count = 0
