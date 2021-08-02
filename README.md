@@ -70,7 +70,7 @@ require('vmath_nvim').setup{
   show_highest = true,
   show_range = true,
   show_median = true,
-  -- show debug info (execution time)
+  -- show debug info (execution time and values)
   debug = false,
   -- save values in registers surrounded with ''
   -- example: 'A'verage gets saved in register a
@@ -89,7 +89,7 @@ require('vmath_nvim').setup{
   show_highest = true,
   show_range = true,
   show_median = true,
-  -- show debug info (execution time)
+  -- show debug info (execution time and values)
   debug = false,
   -- save values in registers surrounded with ''
   -- example: 'A'verage gets saved in register a
