@@ -9,6 +9,12 @@ local function bigger(a,b)
   return a < b
 end
 
+local function print_condition(condition,print_str)
+  if condition then
+    print(print_str)
+  end
+end
+
 local settings = {}
 
 settings.show_sum = true
@@ -20,6 +26,7 @@ settings.show_range = true
 settings.show_median = true
 settings.debug = false
 settings.registers = true
+
 
 function M.setup(update)
   settings = setmetatable(update, { __index = settings })
@@ -52,27 +59,13 @@ function M.calculate()
   else
     median = (numbers[count/2]+numbers[count/2+1])/2
   end
-  if settings.show_sum then
-    print("'S'um: " .. sum)
-  end
-  if settings.show_count then
-    print("'C'ount: " .. count)
-  end
-  if settings.show_average then
-    print("'A'verage: " .. average)
-  end
-  if settings.show_lowest then
-    print("'L'owest: " .. numbers[1])
-  end
-  if settings.show_highest then
-    print("'H'ighest: " .. numbers[#numbers])
-  end
-  if settings.show_range then
-    print("'R'ange: " .. (numbers[#numbers]-numbers[1]))
-  end
-  if settings.show_median then
-    print("'M'edian: " .. median)
-  end
+  print_condition(settings.show_sum,"'S'um: " .. sum)
+  print_condition(settings.show_count,"'C'ount: " .. count)
+  print_condition(settings.show_average,"'A'verage: " .. average)
+  print_condition(settings.show_lowest,"'L'owest: " .. numbers[1])
+  print_condition(settings.show_highest,"'H'ighest: " .. numbers[#numbers])
+  print_condition(settings.show_range,"'R'ange: " .. (numbers[#numbers]-numbers[1]))
+  print_condition(settings.show_median,"'M'edian: " .. median)
   if settings.debug then
     print("used time")
     vim.cmd(string.format([[%s %s]], 'echo', vim.fn['reltimestr'](vim.fn['reltime'](start))))
