@@ -1,14 +1,21 @@
 local M = {}
 
--- vnoremap ++ <ESC> :Vmath<CR>
+-- example: `vnoremap <leader>vm <ESC> :Vmath<CR>`
 local function create_commands()
   vim.cmd("command! -bang -nargs=0 Vmath :lua require('vmath_nvim').calculate()")
 end
 
+---@param a number
+---@param b number
+---@return boolean
+---Returns **true** if a is higher than b
+---Else it returns **false**
 local function bigger(a,b)
   return a < b
 end
 
+---@param print_str string
+---Prints `print_str` if condition is true
 local function print_condition(condition,print_str)
   if condition then
     print(print_str)
