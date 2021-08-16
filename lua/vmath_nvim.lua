@@ -8,7 +8,7 @@ end
 ---@param a number
 ---@param b number
 ---@return boolean
----Returns _true_ if b is higher than a
+---Returns _true_ if a is higher than b
 ---Else it returns _false_
 local function bigger(a,b)
   return a < b
