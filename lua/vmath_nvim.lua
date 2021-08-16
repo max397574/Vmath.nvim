@@ -1,6 +1,6 @@
 local M = {}
 
----example: `vnoremap <leader>vm <ESC> :Vmath<CR>`
+-- example: `vnoremap <leader>vm <ESC> :Vmath<CR>`
 local function create_commands()
   vim.cmd("command! -bang -nargs=0 Vmath :lua require('vmath_nvim').calculate()")
 end
