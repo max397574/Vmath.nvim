@@ -39,8 +39,7 @@ function M.setup(update)
   settings = setmetatable(update, { __index = settings })
 end
 
-function M.calculate()
-  local start = vim.fn['reltime']()
+local function getNumbers()
   local numbers = {}
   local start_pos = vim.fn.getpos("'<")
   local end_pos = vim.fn.getpos("'>")
@@ -52,6 +51,12 @@ function M.calculate()
     i = i + 1
     print_condition(settings.debug,number)
   end
+  return numbers
+end
+
+function M.calculate()
+  local start = vim.fn['reltime']()
+  local numbers = getNumbers()
   local sum = 0
   local count = 0
   table.sort(numbers, bigger)
