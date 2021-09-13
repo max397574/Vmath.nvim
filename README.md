@@ -43,10 +43,22 @@ A lua version of Damian Conway's [vmath](https://www.youtube.com/watch?v=aHm36-n
 
 📦Installation
 ------------
-Use your favourite package manager. Example with [vim-plug](https://github.com/junegunn/vim-plug).
-```
+Use your favourite package manager and call setup function.
+```vim
+" Vimscript with vim-plug
 Plug 'max397574/vmath.nvim'
+lua require("vmath_nvim").init()
 ```
+```
+-- lua with packer.nvim
+use {"max397574/vmath.nvim",
+  config = function()
+    require("vmath_nvim").init()
+  end
+}
+
+```
+
 
 ✅Usage
 -----
